@@ -19,7 +19,7 @@ namespace DRGSave
             Console.WriteLine(formatted);
             foreach (var file in saves)
             {
-                if (file.Name == "76561197968149582_Player.sav")
+                if (file.Name == "ztemp.sav")
                 {
                     ReadSave(file);
                     Console.ReadLine();
@@ -30,7 +30,7 @@ namespace DRGSave
 
         static List<FileInfo> GetSaves()
         {
-            var path = @"B:\steam\steamapps\common\Deep Rock Galactic\FSD\Saved\SaveGames";
+            var path = @"F:\SteamLibrary\steamapps\common\Deep Rock Galactic\FSD\Saved\SaveGames\alex";
             return Directory.GetFiles(path).Select(file => new FileInfo(file)).ToList();
         }
 

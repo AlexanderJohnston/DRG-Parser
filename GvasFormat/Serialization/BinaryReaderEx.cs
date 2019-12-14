@@ -15,11 +15,6 @@ namespace GvasFormat.Serialization
 
             byte[] fourByteValue = reader.ReadBytes(4);
             var length = BitConverter.ToInt32(fourByteValue, 0);
-            if (length == -41594469)
-            {
-                Array.Reverse(fourByteValue);
-                var test = BitConverter.ToUInt32(fourByteValue, 0);
-            }
             if (length == 0)
                 return null;
 
