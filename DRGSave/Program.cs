@@ -19,7 +19,7 @@ namespace DRGSave
             Console.WriteLine(formatted);
             foreach (var file in saves)
             {
-                if (file.Name == "ztemp.sav")
+                if (file.Name == "ztemp2.sav")
                 {
                     ReadSave(file);
                     Console.ReadLine();

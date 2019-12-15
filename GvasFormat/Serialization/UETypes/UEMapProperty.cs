@@ -15,6 +15,7 @@ namespace GvasFormat.Serialization.UETypes
         {
             var keyType = reader.ReadUEString();
             var valueType = reader.ReadUEString();
+            //Unknown why there are 5 empty bytes always in same relative position. probably 4 bytes data + 1 padding/terminator
             var unknown = reader.ReadBytes(5);
             if (unknown.Any(b => b != 0))
                 throw new InvalidOperationException($"Offset: 0x{reader.BaseStream.Position-5:x8}. Expected ??? to be 0, but was 0x{unknown.AsHex()}");
